@@ -1,0 +1,18 @@
+{
+  "name": "it-systeme-rehren-tsc-titanium-sitepackage",
+  "description": "Sitepackage for TSC Titanium",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tsc-titanium/sitepackage"
+  },
+  "homepage": "https://it-systeme-rehren.de/",
+  "author": "Friedrich Rehren",
+  "version": "1.0.0",
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-uglify": "^4.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-contrib-imagemin": "^2.0.1"
+  }
+}
