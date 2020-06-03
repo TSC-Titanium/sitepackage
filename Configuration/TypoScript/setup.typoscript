@@ -8,6 +8,13 @@
 #### PAGE ####
 ##############
 page {
+    includeCSSLibs {
+        bootstrap4 = https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css
+        bootstrap4.external = 1
+        googleIcons = https://fonts.googleapis.com/icon?family=Material+Icons
+        googleIcons.external = 1
+    }
+
     includeCSS {
         theme = EXT:tsc_titanium_sitepackage/Resources/Public/Scss/Theme/theme.scss
     }
@@ -21,7 +28,12 @@ page {
     }
 
     includeJSFooterlibs {
-
+        jquery3 = https://code.jquery.com/jquery-3.5.1.slim.min.js
+        jquery3.external = 1
+        popperjs = https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js
+        popperjs.external = 1
+        bootstrap4 = https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js
+        bootstrap4.external = 1
     }
 
     includeJSFooter {
