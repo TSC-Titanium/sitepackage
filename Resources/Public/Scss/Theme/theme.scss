@@ -7,3 +7,39 @@
 // Import needed Bootstrap Package Files
 //
 @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/theme";
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body { 
+    margin: 0;
+    height: 100%;
+}
+
+.intro {
+    background: url("/assets/images/gallery/home.jpg")  no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    .rgba-black-strong {
+        background: rgba(0, 0, 0, 0.8);
+    }
+    
+    .unmask {
+        color: whitesmoke;
+    }
+
+    .hr-white {
+        border-color: #EEEEEE;
+        border-style: solid none;
+        border-width: 1px 0;
+    }
+    
+    .btn {
+        border-color: white;
+    }
+}
