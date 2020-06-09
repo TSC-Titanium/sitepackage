@@ -37,6 +37,6 @@ foreach ($icons as $icon) {
     $iconRegistry->registerIcon(
         'titanium-package-' . $icon,
         \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/' . $icon . '.svg']
+        ['source' => 'EXT:tsc_titanium_sitepackage/Resources/Public/Icons/ContentElements/' . $icon . '.svg']
     );
 }
