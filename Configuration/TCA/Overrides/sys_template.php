@@ -7,13 +7,24 @@ call_user_func(function()
      * Temporary variables
      */
     $extensionKey = 'tsc_titanium_sitepackage';
-
-    /**
-     * Default TypoScript for TscTitaniumSitepackage
-     */
+    
+    /***************
+    * TypoScript: Full Package
+    * This includes the full setup including all configurations
+    */
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $extensionKey,
         'Configuration/TypoScript',
-        'tsc-titanium-sitepackage'
+        'TSC Titanium Package: Full Package'
+    );
+
+    /***************
+    * TypoScript: Content Elements
+    * Include only the configuration for content elements
+    */
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        $extensionKey,
+        'Configuration/TypoScript/ContentElement',
+        'TSC Titanium Package: Content Elements'
     );
 });
