@@ -1,6 +1,6 @@
 ### CTYPE: BoardMembers ###
 
-tt_content.board_members =< lib.contentElement    
+tt_content.board_members < lib.contentElement    
 tt_content.board_members {
     templateName = BoardMembers
 }
