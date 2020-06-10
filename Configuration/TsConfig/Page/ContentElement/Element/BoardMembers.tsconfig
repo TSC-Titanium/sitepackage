@@ -1,0 +1,21 @@
+### NEW CONTENT ELEMENT WIZARD ###
+mod.wizards.newContentElement.wizardItems.dynamic {
+    elements {
+        board_members {
+            iconIdentifier = titanium-package-board-members
+            title = LLL:EXT:tsc_titanium_sitepackage/Resources/Private/Language/Backend.xlf:content_element.board-members
+            description = LLL:EXT:tsc_titanium_sitepackage/Resources/Private/Language/Backend.xlf:content_element.board-members.description
+            tt_content_defValues {
+                CType = board_members
+            }
+        }
+    }
+    show := addToList(board_members)
+}
+
+### PREVIEW ###
+mod.web_layout.tt_content {
+    preview {
+        board_members = EXT:tsc_titanium_sitepackage/Resources/Private/Templates/Preview/BoardMembers.html
+    }
+}

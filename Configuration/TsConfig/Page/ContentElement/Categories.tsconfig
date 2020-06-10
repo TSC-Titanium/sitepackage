@@ -1,0 +1,4 @@
+### CATEGORIES ###
+mod.wizards.newContentElement.wizardItems {
+    dynamic.header = LLL:EXT:tsc_titanium_sitepackage/Resources/Private/Language/Backend.xlf:content_group.dynamic
+}

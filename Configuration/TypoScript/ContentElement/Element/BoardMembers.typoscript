@@ -1,0 +1,22 @@
+### CTYPE: BoardMembers ###
+
+tt_content.board_members < lib.contentElement    
+tt_content.board_members {
+    templateName = BoardMembers
+
+    dataProcessing {
+        10 = BK2K\BootstrapPackage\DataProcessing\CsvFileProcessor
+        10 {
+            references.fieldName = media
+            fieldDelimiter.char.cObject = TEXT
+            fieldDelimiter.char.cObject {
+                field = table_delimiter
+            }
+            fieldEnclosure.char.cObject = TEXT
+            fieldEnclosure.char.cObject {
+                field = table_enclosure
+            }
+            maximumColumns.field = cols
+        }
+    }
+}

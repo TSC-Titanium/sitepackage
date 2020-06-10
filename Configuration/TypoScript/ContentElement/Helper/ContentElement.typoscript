@@ -1,0 +1,12 @@
+lib.contentElement = FLUIDTEMPLATE
+lib.contentElement {
+    templateRootPaths {
+        100 = EXT:tsc_titanium_sitepackage/Resources/Private/Templates/ContentElements/
+    }
+    partialRootPaths {
+        100 = EXT:tsc_titanium_sitepackage/Resources/Private/Partials/ContentElements/
+    }
+    layoutRootPaths {
+        100 = EXT:tsc_titanium_sitepackage/Resources/Private/Layouts/ContentElements/
+    }
+}

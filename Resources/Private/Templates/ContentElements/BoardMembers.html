@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:d="TYPO3\CMS\Install\ViewHelpers\File\ExistsViewHelper" data-namespace-typo3-fluid="true">
+
+<f:for each="{files}" as="file">
+    <f:if condition="{file.table}">
+        <div class="container-fluid pt-4">
+            <f:for each="{file.table}" as="row" iteration="rowIterator">
+                <f:if condition="{rowIterator.isOdd}">
+                    <div class="row justify-content-md-center d-flex align-items-center mb-4">
+                </f:if>
+
+                <div class="col-sm-2">
+                    {namespace v=FluidTYPO3\Vhs\ViewHelpers}
+                    <v:media.exists file="fileadmin/avatars/{row.1 -> f:format.case(mode: 'lower')}_{row.0 -> f:format.case(mode: 'lower')}.jpg">
+                        <f:then>
+                            <img class="lazyload"
+                                style="width: 120px; height: 120px; display: block; border-radius: 50%; object-fit: cover;"
+                                src="/fileadmin/avatars/{row.1 -> f:format.case(mode: 'lower')}_{row.0 -> f:format.case(mode: 'lower')}.jpg">
+                        </f:then>
+                        <f:else>
+                            <img class="lazyload"
+                                style="width: 120px; height: 120px; display: block; border-radius: 50%; object-fit: cover;"
+                                src="/fileadmin/avatars/placeholder.jpg">
+                        </f:else>
+                    </v:media.exists>
+                </div>
+
+                <div class="col-md-4 pb-4">
+                    <span>
+                        <strong>{row.2}:
+                            <a>{row.0} {row.1}</a>
+                        </strong>
+                        <br />{row.3}
+                    </span>
+                </div>
+                
+                <f:if condition="{rowIterator.isEven}">
+                    </div>
+                </f:if>
+            </f:for>
+        </div>
+    </f:if>
+</f:for>
+
+</html>
