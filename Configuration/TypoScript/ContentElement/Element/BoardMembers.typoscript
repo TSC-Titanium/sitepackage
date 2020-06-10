@@ -3,4 +3,5 @@
 tt_content.board_members < lib.contentElement    
 tt_content.board_members {
     templateName = BoardMembers
+    templateRootPaths.100 = EXT:tsc_titanium_sitepackage/Resources/Private/Templates/ContentElements/
 }
