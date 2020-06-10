@@ -19,8 +19,8 @@ call_user_func(function()
     /***************
     * Add Content Element
     */
-    if (!is_array($GLOBALS['TCA']['tt_content']['types']['board-members'])) {
-        $GLOBALS['TCA']['tt_content']['types']['board-members'] = [];
+    if (!is_array($GLOBALS['TCA']['tt_content']['types']['board_members'])) {
+        $GLOBALS['TCA']['tt_content']['types']['board_members'] = [];
     }
 
     /***************
@@ -40,7 +40,7 @@ call_user_func(function()
         'CType',
         [
             'LLL:EXT:tsc_titanium_sitepackage/Resources/Private/Language/Backend.xlf:content_element.board-members',
-            'board-members',
+            'board_members',
             'titanium-package-board-members'
         ],
         'accordion',
@@ -50,13 +50,13 @@ call_user_func(function()
     /***************
     * Assign Icon
     */
-    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['board-members'] = 'titanium-package-board-members';
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['board_members'] = 'titanium-package-board-members';
 
     /***************
     * Configure element type
     */
-    $GLOBALS['TCA']['tt_content']['types']['board-members'] = array_replace_recursive(
-        $GLOBALS['TCA']['tt_content']['types']['board-members'],
+    $GLOBALS['TCA']['tt_content']['types']['board_members'] = array_replace_recursive(
+        $GLOBALS['TCA']['tt_content']['types']['board_members'],
         [
             'showitem' => '
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
