@@ -9,7 +9,7 @@
 ############
 page {
     logo {
-        file = EXT:tsc_titanium_sitepackage/Resources/Public/Icons/favicon.svg
+        file = typo3conf/ext/tsc_titanium_sitepackage/Resources/Public/Icons/favicon.svg
     }
     favicon {
         file = EXT:tsc_titanium_sitepackage/Resources/Public/Icons/favicon.ico
