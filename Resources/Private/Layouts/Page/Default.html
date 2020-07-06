@@ -10,27 +10,69 @@
             <f:if condition="{mainnavigationItem.children}">
                 <f:then>
                     <li class="nav-item {f:if(condition: mainnavigationItem.active, then:'active')} dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           {mainnavigationItem.title}
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <f:for each="{mainnavigationItem.children}" as="child">
-                                <f:if condition="{child.spacer} == 0">
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownLink">
+                            <f:for each="{mainnavigationItem.children}" as="childLvl1">
+                                <f:if condition="{childLvl1.spacer} == 0">
                                     <f:then>
-                                        <a class="dropdown-item" href="{child.link}">{child.title}</a>
+                                        <f:if condition="{childLvl1.children}">
+                                            <f:then>
+                                                <li class="dropdown-submenu">
+                                                    <a class="dropdown-item dropdown-toggle" href="#">{childLvl1.title}</a>
+                                                    <ul class="dropdown-menu">
+                                                        <f:for each="{childLvl1.children}" as="childLvl2">
+                                                            <f:if condition="{childLvl2.spacer} == 0">
+                                                                <f:then>
+                                                                    <f:if condition="{childLvl2.children}">
+                                                                        <f:then>
+                                                                            <li class="dropdown-submenu">
+                                                                                <a class="dropdown-item dropdown-toggle" href="#">{childLvl2.title}</a>
+                                                                                <ul class="dropdown-menu">
+                                                                                    <f:for each="{childLvl2.children}" as="childLvl3">
+                                                                                        <f:if condition="{childLvl3.spacer} == 0">
+                                                                                            <f:then>
+                                                                                                <li><a class="dropdown-item" href="{childLvl3.link}">{childLvl3.title}</a></li>
+                                                                                            </f:then>
+                                                                                            <f:else>
+                                                                                                <li><div class="dropdown-divider"></div></li>
+                                                                                            </f:else>
+                                                                                        </f:if>
+                                                                                    </f:for>
+                                                                                </ul>
+                                                                            </li>
+                                                                        </f:then>
+                                                                        <f:else>
+                                                                            <li><a class="dropdown-item" href="{childLvl2.link}">{childLvl2.title}</a></li>
+                                                                        </f:else>
+                                                                    </f:if>
+                                                                </f:then>
+                                                                <f:else>
+                                                                    <li><div class="dropdown-divider"></div></li>
+                                                                </f:else>
+                                                            </f:if>
+                                                        </f:for>
+                                                    </ul>
+                                                </li>
+                                            </f:then>
+                                            <f:else>
+                                                <li><a class="dropdown-item" href="{childLvl1.link}">{childLvl1.title}</a></li>
+                                            </f:else>
+                                        </f:if>
                                     </f:then>
                                     <f:else>
-                                        <div class="dropdown-divider"></div>
+                                        <li><div class="dropdown-divider"></div></li>
                                     </f:else>
                                 </f:if>
                             </f:for>
-                        </div>
-                      </li>
+                        </ul>
+                    </li>
                 </f:then>
                 <f:else>
                     <li class="nav-item {f:if(condition: mainnavigationItem.active, then:'active')}">
                         <a class="nav-link" href="{mainnavigationItem.link}">{mainnavigationItem.title} <span class="sr-only">(current)</span></a>
-                      </li>
+                    </li>
                 </f:else>
             </f:if>
         </f:for>
