@@ -9,6 +9,11 @@
 #### PAGE ####
 ##############
 page {
+    headerData {
+        1 = TEXT
+        1.value = <link rel="icon" type="image/svg+xml" href="{$page.logo.file}" sizes="any">
+    }
+
     includeCSSLibs {
         bootstrap4 = https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css
         bootstrap4.external = 1

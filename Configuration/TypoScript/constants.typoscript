@@ -9,12 +9,7 @@
 ############
 page {
     logo {
-        file = EXT:tsc_titanium_sitepackage/Resources/Public/Images/logo.svg
-        fileInverted = EXT:tsc_titanium_sitepackage/Resources/Public/Images/logo-inverted.svg
-        height = 52
-        width = 192
-        alt = tsc-titanium-sitepackage
-        linktitle = tsc-titanium-sitepackage
+        file = EXT:tsc_titanium_sitepackage/Resources/Public/Icons/favicon.svg
     }
     favicon {
         file = EXT:tsc_titanium_sitepackage/Resources/Public/Icons/favicon.ico
