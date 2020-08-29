@@ -19,6 +19,11 @@ page {
         partialRootPath = EXT:tsc_titanium_sitepackage/Resources/Private/Partials/Page/
         templateRootPath = EXT:tsc_titanium_sitepackage/Resources/Private/Templates/Page/
     }
+    tracking {
+        google {
+            trackingID = UA-176789231-1
+        }
+    }
 }
 
 
